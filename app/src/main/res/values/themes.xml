@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ozinshe" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:textCursorDrawable">@color/violet_400</item>
+        <item name="colorControlActivated">@color/violet_400</item>
+        <item name="colorAccent">@color/violet_400</item>
+        <item name="colorControlNormal">@color/grey_400</item>
+        <item name="textInputStyle">
+            @style/MyCustomTextInputStyle
+        </item>
+        <item name="editTextStyle">
+            @style/MyCustomEditTextStyle
+        </item>
+        <item name="switchStyle">
+            @style/SwitchCustom
+        </item>
+    </style>
+    <style name="Theme.Ozinshe" parent="Base.Theme.Ozinshe" />
+
+    <style name="SwitchCustom" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="android:thumb">@drawable/thumb_notif</item>
+        <item name="android:track">@drawable/track_notif</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:switchStyle">@color/switch_on</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="ErrorTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="MyCustomTextInputStyle" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/grey_400</item>
+    </style>
+
+    <style name="MyCustomEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/grey_900</item>
+        <item name="fontFamily">@font/sf_semibold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="CustomTimePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <!-- Цвет фона диалога -->
+        <item name="android:windowBackground">@color/violet_400_opacity</item>
+        <!-- Цвет текста времени -->
+        <item name="android:textColorPrimary">@color/grey_50</item>
+        <!-- Цвет кнопки "OK" -->
+        <item name="colorPrimary">@color/violet_400</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Цвет кнопки "Cancel" -->
+        <item name="colorSecondary">@color/grey_800</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Цвет заголовка диалога -->
+        <item name="android:textColor">@color/black</item>
+        <!-- Цвет фона диалогового окна -->
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorAccent">@color/grey_50</item>
+    </style>
+</resources>

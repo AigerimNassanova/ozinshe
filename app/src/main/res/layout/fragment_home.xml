@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Logo-->
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="-24dp"/>
+
+            <!--Main recommendation-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mainMoviesRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-24dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"/>
+
+            <!--Телехикая-->
+            <TextView
+                android:id="@+id/tvSeriesBlockName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Телехикаялар"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mainMoviesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"/>
+
+            <TextView
+                android:id="@+id/tvSeriesMore"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Барлығы"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mainMoviesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/violet_300"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="right"
+                android:layout_marginEnd="24dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tvSeriesRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSeriesBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"/>
+
+            <!--Толықметрлі мультфильмдер-->
+            <TextView
+                android:id="@+id/cartoonsBlockName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Толықметрлі мультфильмдер"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSeriesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"/>
+
+            <TextView
+                android:id="@+id/cartoonsMore"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Барлығы"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSeriesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/violet_300"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="right"
+                android:layout_marginEnd="24dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartoonsRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cartoonsBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"/>
+
+            <!--Жанрды таңдаңыз-->
+            <TextView
+                android:id="@+id/genreBlockName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Жанрды таңдаңыз"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cartoonsRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/genreRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genreBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"/>
+
+            <!--Мультсериалдар-->
+            <TextView
+                android:id="@+id/animatedSeriesBlockName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мультсериалдар"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genreRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"/>
+
+            <TextView
+                android:id="@+id/animatedSeriesMore"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Барлығы"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genreRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/violet_300"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="right"
+                android:layout_marginEnd="24dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/animatedSeriesRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animatedSeriesBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"/>
+
+            <!--Сиктомдар-->
+            <TextView
+                android:id="@+id/sitcomsBlockName"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Тв-бағдарлама және реалити-шоу"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animatedSeriesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"/>
+
+            <TextView
+                android:id="@+id/sitcomsMore"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Барлығы"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animatedSeriesRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/violet_300"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:gravity="right"
+                android:layout_marginEnd="24dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sitcomsRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sitcomsBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"/>
+
+            <!--Жасына сәйкес-->
+            <TextView
+                android:id="@+id/agePropBlockName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Жасына сәйкес"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sitcomsRc"
+                android:textSize="18dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:visibility="gone"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/agePropRc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/agePropBlockName"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

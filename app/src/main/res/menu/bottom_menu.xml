@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/style_navbar_home_action"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/style_navbar_search_action"
+        android:title="Search"/>
+
+    <item
+        android:id="@+id/bookmarkFragment"
+        android:icon="@drawable/style_navbar_bookmark_action"
+        android:title="Bookmark"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/style_navbar_profile_action"
+        android:title="Profile"/>
+</menu>

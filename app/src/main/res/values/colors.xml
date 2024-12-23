@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_50">#dedede</color>
+    <color name="grey_100">#F3F4F6</color>
+    <color name="grey_500">#6B7280</color>
+    <color name="grey_300">#D1D5DB</color>
+    <color name="grey_400">#9CA3AF</color>
+    <color name="grey_600">#4B5563</color>
+    <color name="grey_700">#374151</color>
+    <color name="grey_800">#1C2431</color>
+    <color name="grey_900">#111827</color>
+    <color name="violet_50">#F8EEFF</color>
+    <color name="violet_300">#B376F7</color>
+    <color name="violet_400">#9753F0</color>
+    <color name="violet_400_opacity">#809753F0</color>
+    <color name="violet_500">#7E2DFC</color>
+    <color name="fui_transparent">#00000000</color>
+    <color name="descriptionColor">#787878</color>
+
+    <!--BottomNavigationBar-->
+    <color name="nav_bar2">#D1D5DB</color>
+    <color name="nav_bar1">#7E2DFC</color>
+    <color name="toolbar_color">#EFEBEC</color>
+
+    <color name="switch_on">#B376F7</color>
+    <color name="switch_off">#E5E7EB</color>
+
+    <color name="red">#FF0004</color>
+    <color name="errorColor">#FF402B</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustResize"
+    tools:context=".presentation.sign_up.RegistrationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/toolbar_log"
+            layout="@layout/toolbar_sign_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tool">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Тіркелу"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sfprotext_regular"
+                android:text="Деректерді толтырыңыз"
+                android:textColor="@color/descriptionColor"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/register"
+                app:layout_constraintStart_toStartOf="@+id/register"
+                app:layout_constraintTop_toBottomOf="@+id/register" />
+
+            <TextView
+                android:id="@+id/email_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_display_bold"
+                app:layout_constraintEnd_toEndOf="@+id/description"
+                app:layout_constraintStart_toStartOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/rgEmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/ic_message"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:hint="Сіздің email"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:lineHeight="22sp"
+                android:textColor="@color/black"
+                android:textColorHint="#A1A1A1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@id/email_title"
+                app:layout_constraintStart_toStartOf="@id/email_title"
+                app:layout_constraintTop_toBottomOf="@id/email_title"
+                android:background="@drawable/edit_text_border" />
+
+            <TextView
+                android:id="@+id/tvErrorTextEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgEmailEditText"
+                android:layout_marginTop="16dp"
+                android:text="Қате формат"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textColor="@color/errorColor"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/lgBoxStrokeEmail"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorTextEmail" />
+
+            <TextView
+                android:id="@+id/password_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Құпия сөз"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_display_bold"
+                app:layout_constraintEnd_toEndOf="@+id/lgBoxStrokeEmail"
+                app:layout_constraintStart_toStartOf="@+id/lgBoxStrokeEmail"
+                app:layout_constraintTop_toBottomOf="@+id/lgBoxStrokeEmail"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/rgPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/ic_password"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:hint="Сіздің құпия сөзіңіз"
+                android:inputType="textPassword|textNoSuggestions"
+                android:lineHeight="22sp"
+                android:textColor="@color/black"
+                android:textColorHint="#A1A1A1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/password_title"
+                app:layout_constraintStart_toStartOf="@+id/password_title"
+                app:layout_constraintTop_toBottomOf="@+id/password_title"
+                android:background="@drawable/edit_text_border" />
+
+            <TextView
+                android:id="@+id/tvErrorTextPassword1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgPasswordEditText"
+                android:layout_marginTop="16dp"
+                android:text="Құпия сөздің ұзындығы 6 таңбадан кем емес"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textColor="@color/errorColor"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/lgBoxStrokePassword"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorTextPassword1" />
+
+            <TextView
+                android:id="@+id/password_title_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Құпия сөзді қайталаңыз"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sf_pro_display_bold"
+                app:layout_constraintEnd_toEndOf="@+id/lgBoxStrokePassword"
+                app:layout_constraintStart_toStartOf="@+id/lgBoxStrokePassword"
+                app:layout_constraintTop_toBottomOf="@+id/lgBoxStrokePassword"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/rgPassword2EditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawableStart="@drawable/ic_password"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:hint="Сіздің құпия сөзіңіз"
+                android:inputType="textPassword|textNoSuggestions"
+                android:lineHeight="22sp"
+                android:textColor="@color/black"
+                android:textColorHint="#A1A1A1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/password_title_2"
+                app:layout_constraintStart_toStartOf="@+id/password_title_2"
+                app:layout_constraintTop_toBottomOf="@+id/password_title_2"
+                android:background="@drawable/edit_text_border" />
+
+            <TextView
+                android:id="@+id/tvErrorTextPassword2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgPassword2EditText"
+                android:layout_marginTop="16dp"
+                android:text="Құпия сөздер сәйкес емес"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textColor="@color/errorColor"
+                android:textSize="14sp"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/lgBoxStrokePassword2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErrorTextPassword2" />
+
+            <ImageButton
+                android:id="@+id/btnShowPasswordAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/fui_transparent"
+                android:src="@drawable/ic_eye_pass_registration"
+                android:paddingEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/rgPasswordEditText"
+                app:layout_constraintEnd_toEndOf="@id/rgPasswordEditText"
+                app:layout_constraintTop_toTopOf="@id/rgPasswordEditText" />
+
+            <ImageButton
+                android:id="@+id/btnShowPassword2Again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/fui_transparent"
+                android:src="@drawable/ic_eye_pass_registration"
+                android:paddingEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@id/rgPassword2EditText"
+                app:layout_constraintEnd_toEndOf="@id/rgPassword2EditText"
+                app:layout_constraintTop_toTopOf="@id/rgPassword2EditText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLay">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/LoginProgressBar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:elevation="7dp"
+                android:indeterminate="true"
+                android:indeterminateTint="#FFFFFF"
+                android:indeterminateTintMode="src_atop"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/button_shape"
+                android:clickable="true"
+                android:text="Тіркелу"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/sectionToRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/signIn"
+            app:layout_constraintStart_toStartOf="@id/signIn"
+            app:layout_constraintTop_toBottomOf="@id/signIn">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:gravity="end"
+                android:lineHeight="20sp"
+                android:text="Сізде аккаунт бар ма?"
+                android:textColor="@color/grey_500"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btnTextTransitionForRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/sf_pro_text_semi_bold"
+                android:lineHeight="20sp"
+                android:text="Кіру"
+                android:textColor="@color/violet_300"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

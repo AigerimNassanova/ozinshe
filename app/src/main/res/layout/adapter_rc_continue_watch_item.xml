@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="185dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cntWatchImgHolder"
+        android:layout_width="185dp"
+        android:layout_height="115dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cntWatchImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/cntWatchTitle"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:text="Глобус"
+        app:layout_constraintStart_toStartOf="@id/cntWatchImgHolder"
+        app:layout_constraintEnd_toEndOf="@id/cntWatchImgHolder"
+        app:layout_constraintTop_toBottomOf="@id/cntWatchImgHolder"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:textColor="@color/grey_900"/>
+
+    <TextView
+        android:id="@+id/cntWatchDescription"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:text="2-бөлім"
+        app:layout_constraintStart_toStartOf="@id/cntWatchTitle"
+        app:layout_constraintEnd_toEndOf="@id/cntWatchTitle"
+        app:layout_constraintTop_toBottomOf="@id/cntWatchTitle"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:textColor="@color/grey_400"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
